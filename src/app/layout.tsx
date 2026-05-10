@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://atithimotors.in'),
+  metadataBase: new URL('https://atithi-motors.netlify.app'),
   title: {
     default: 'Atithi Motors — TATA Authorized Service Center, Ghazipur',
     template: '%s | Atithi Motors',
@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   creator: 'Atithi Motors',
   publisher: 'Atithi Motors',
   alternates: {
-    canonical: 'https://atithimotors.in',
+    canonical: 'https://atithi-motors.netlify.app',
   },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://atithimotors.in',
+    url: 'https://atithi-motors.netlify.app',
     siteName: 'Atithi Motors',
     title: 'Atithi Motors — TATA Authorized Service Center, Ghazipur',
     description:
