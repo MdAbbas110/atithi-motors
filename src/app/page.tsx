@@ -15,9 +15,6 @@ export const metadata: Metadata = {
   title: 'Atithi Motors — TATA Authorized Service Center, Ghazipur',
   description:
     'Atithi Motors is your trusted TATA Motors Authorized Service Center in Ghazipur, UP. Genuine parts, DEF/Urea sales, cashless insurance claims, free pickup & drop. Call 7518951555.',
-  alternates: {
-    canonical: 'https://atithimotors.in',
-  },
 };
 
 export default function HomePage() {

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
       'TATA Motors Authorized Service Center in Ghazipur. Genuine parts, DEF/Urea sales, cashless insurance, free pickup & drop. Est. 2018.',
     images: [
       {
-        url: '/preview.png',
+        url: '/preview.jpg',
         width: 1200,
         height: 630,
         alt: 'Atithi Motors TATA Authorized Service Center workshop in Ghazipur',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: 'Atithi Motors — TATA Authorized Service Center, Ghazipur',
     description:
       'TATA Motors Authorized Service Center in Ghazipur. Genuine parts, DEF/Urea sales, cashless insurance, free pickup & drop.',
-    images: ['/preview.png'],
+    images: ['/preview.jpg'],
   },
   robots: {
     index: true,
