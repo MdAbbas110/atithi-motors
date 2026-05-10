@@ -1,0 +1,120 @@
+.contact {
+  padding: 96px 0;
+  background: var(--blue);
+  position: relative;
+  overflow: hidden;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+}
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; right: -80px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(255,107,0,0.12) 0%, transparent 70%);
+}
+.contactInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+.contactLeft :global(.section-label) {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+  color: #FFD4A8;
+}
+.contactTitle {
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+.contactDesc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.contactDetails { display: flex; flex-direction: column; gap: 14px; }
+.contactDetail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+}
+.contactDetailIcon {
+  width: 38px; height: 38px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.contactDetailSub { font-size: 12px; color: rgba(255,255,255,0.55); }
+
+.bookingForm {
+  background: white;
+  border-radius: 16px;
+  padding: 36px;
+}
+.bookingTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+.bookingSub {
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+.formGroup {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.formLabel { font-size: 13px; font-weight: 600; color: var(--charcoal); }
+.formInput {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 14px;
+  background: var(--off-white);
+  color: var(--charcoal);
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+.formInput:focus {
+  border-color: var(--blue);
+  background: white;
+}
+.bookingSuccess {
+  background: #E8F5E9;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.bookingSuccessIcon { font-size: 40px; margin-bottom: 8px; }
+.bookingSuccessTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2E7D32;
+  margin-bottom: 6px;
+}
+.bookingSuccessText { font-size: 13px; color: #388E3C; }
+
+@media (max-width: 900px) {
+  .contactInner { grid-template-columns: 1fr; gap: 40px; }
+}

@@ -1,0 +1,121 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  height: 68px;
+}
+.navbar.scrolled {
+  border-color: var(--border);
+  box-shadow: 0 2px 16px rgba(26,79,160,0.08);
+}
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navLogoImage {
+  height: 42px;
+  width: 96px;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: 4px;
+}
+.navLogoText {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--blue);
+  line-height: 1;
+}
+.navLogoSub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: var(--gray-light);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.navLinks a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray);
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+.navLinks a:hover {
+  color: var(--blue);
+  background: var(--blue-light);
+}
+.navCta {
+  display: flex; align-items: center; gap: 10px;
+}
+.navCall {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  display: flex; align-items: center; gap: 6px;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--charcoal);
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+.hamburgerOpen span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburgerOpen span:nth-child(2) { opacity: 0; }
+.hamburgerOpen span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 68px; left: 0; right: 0;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px 24px;
+  z-index: 999;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  flex-direction: column;
+  gap: 4px;
+}
+.mobileMenu.open { display: flex; }
+.mobileMenu a {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--charcoal);
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--off-white);
+  transition: color 0.2s;
+}
+.mobileMenu a:last-child { border-bottom: none; }
+.mobileMenu a:hover { color: var(--blue); }
+
+@media (max-width: 900px) {
+  .navLinks, .navCta { display: none; }
+  .hamburger { display: flex; }
+}

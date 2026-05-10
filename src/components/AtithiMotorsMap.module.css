@@ -1,0 +1,102 @@
+.mapSection {
+  padding: 96px 0;
+  background: var(--white);
+}
+.mapHeader {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.mapDesc {
+  font-size: 15px;
+  color: var(--gray);
+  margin-top: 8px;
+}
+.canvasContainer {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #a0bcd8;
+  box-shadow: var(--shadow-md);
+}
+.citiesGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+.cityCard {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.3s;
+  background: white;
+}
+.cityCard.activeHq {
+  border-color: var(--orange);
+  background: #FFF4EE;
+}
+.cityCard.activeNormal {
+  border-color: var(--blue);
+  background: var(--blue-light);
+}
+.cityDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 auto 6px;
+  transition: background-color 0.3s;
+  background: #D1D5DB;
+}
+.cityDot.activeHq {
+  background: var(--orange);
+}
+.cityDot.activeNormal {
+  background: var(--blue);
+}
+.cityName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+.cityTag {
+  font-size: 11px;
+  margin-top: 4px;
+  color: #9CA3AF;
+}
+.cityTag.activeHq {
+  color: var(--orange);
+}
+.cityTag.activeNormal {
+  color: var(--blue);
+}
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+.statCard {
+  background: #F4F7FB;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+.statNum {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--blue);
+}
+.statLabel {
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .citiesGrid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .citiesGrid { grid-template-columns: repeat(2, 1fr); }
+  .statsGrid { grid-template-columns: 1fr; }
+}

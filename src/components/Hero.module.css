@@ -1,0 +1,473 @@
+/* ═══════════════════════════════════════
+   HERO SECTION — ATITHI MOTORS
+═══════════════════════════════════════ */
+
+.hero {
+  padding: 128px 0 88px;
+  background: var(--white);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Ambient background ── */
+.bgGradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 72% 60% at 80% 20%, rgba(26,79,160,0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(255,107,0,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.bgGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26,79,160,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,79,160,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 80% at 70% 40%, black 30%, transparent 80%);
+  pointer-events: none;
+}
+
+/* ── Layout ── */
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* ════════════════════════════════
+   LEFT COLUMN — CONTENT
+════════════════════════════════ */
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Eyebrow badge */
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--blue-light);
+  border: 1px solid #C8D8F4;
+  border-radius: 100px;
+  padding: 6px 18px 6px 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: 24px;
+  width: fit-content;
+  letter-spacing: 0.01em;
+  animation: fadeSlideDown 0.6s ease both;
+}
+
+.heroBadgeDot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.22);
+  animation: pulseDot 2.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.22); }
+  50%       { box-shadow: 0 0 0 6px rgba(34,197,94,0.08); }
+}
+
+/* Brand headline */
+.heroTitle {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  animation: fadeSlideDown 0.6s 0.1s ease both;
+}
+
+.brandName {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(42px, 5.5vw, 68px);
+  font-weight: 700;
+  color: var(--blue);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+}
+
+.heroSubTitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(26px, 3.2vw, 42px);
+  font-weight: 600;
+  color: var(--charcoal);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-top: 4px;
+}
+
+.highlight {
+  color: var(--orange);
+  position: relative;
+}
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange), transparent);
+  border-radius: 2px;
+  animation: underlineGrow 0.8s 0.7s ease both;
+  transform-origin: left;
+}
+@keyframes underlineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Hindi tagline */
+.heroHindi {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  color: var(--gray-light);
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 28px;
+  animation: fadeSlideDown 0.6s 0.2s ease both;
+}
+
+/* ── Dual Facility Cards ── */
+.facilityRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  animation: fadeSlideDown 0.6s 0.3s ease both;
+}
+
+.facilityCard {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--fAccent, rgba(26,79,160,0.06));
+  border: 1.5px solid rgba(26,79,160,0.18);
+  border-radius: 14px;
+  padding: 14px 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.facilityCard::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, var(--fColor, #1A4FA0), transparent 70%);
+  opacity: 0.06;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.facilityCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(26,79,160,0.16);
+  background: rgba(26,79,160,0.08);
+}
+
+.facilityIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.facilityLabel {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.2;
+}
+
+.facilityDesc {
+  font-size: 11.5px;
+  color: var(--gray-light);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.facilityCheck {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #22c55e;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ── CTAs ── */
+.heroCtas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  animation: fadeSlideDown 0.6s 0.4s ease both;
+}
+
+/* ── Trust strip ── */
+.heroTrust {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  animation: fadeSlideDown 0.6s 0.5s ease both;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.trustDivider {
+  width: 4px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════
+   RIGHT COLUMN — VISUAL
+════════════════════════════════ */
+
+.heroVisual {
+  position: relative;
+  animation: fadeSlideRight 0.7s 0.2s ease both;
+}
+
+/* Decorative glow behind card */
+.glowRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  border-radius: 24px;
+  background: radial-gradient(ellipse, rgba(26,79,160,0.12) 0%, transparent 70%);
+  filter: blur(32px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heroImageCard {
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow:
+    0 4px 16px rgba(26,79,160,0.10),
+    0 24px 64px rgba(26,79,160,0.14);
+  z-index: 1;
+}
+
+.heroBgImg {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 22px;
+  transition: transform 6s ease;
+}
+.heroImageCard:hover .heroBgImg {
+  transform: scale(1.04);
+}
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(8,16,46,0.82) 0%, rgba(8,16,46,0.28) 50%, transparent 100%),
+    linear-gradient(to right, rgba(8,16,46,0.25) 0%, transparent 60%);
+  z-index: 1;
+  border-radius: 22px;
+}
+
+/* Floating top-right badge */
+.floatingBadge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 8px 14px;
+  box-shadow: 0 4px 16px rgba(26,79,160,0.15);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+  animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-4px); }
+}
+
+/* Floating facility pills */
+.floatingPill {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 100px;
+  padding: 7px 14px 7px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--charcoal);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  z-index: 3;
+  white-space: nowrap;
+}
+
+.pillPassenger {
+  top: 18px;
+  left: 16px;
+  animation: floatPill1 3.5s 0.4s ease-in-out infinite;
+}
+
+.pillCommercial {
+  top: 60px;
+  left: 16px;
+  animation: floatPill2 3.5s 0.9s ease-in-out infinite;
+}
+
+@keyframes floatPill1 {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(4px); }
+}
+@keyframes floatPill2 {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(-4px); }
+}
+
+.pillDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.pillDotBlue   { background: #1A4FA0; box-shadow: 0 0 0 3px rgba(26,79,160,0.18); }
+.pillDotOrange { background: #FF6B00; box-shadow: 0 0 0 3px rgba(255,107,0,0.18); }
+
+/* Stats bar */
+.heroStatRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 16px;
+  z-index: 2;
+}
+
+.heroStat {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 12px 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+.heroStat:hover { transform: translateY(-2px); }
+
+.heroStatNum {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--blue);
+  line-height: 1;
+}
+
+.heroStatLabel {
+  font-size: 10px;
+  color: var(--gray);
+  font-weight: 600;
+  margin-top: 4px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ════════════════════════════════
+   ENTRANCE ANIMATIONS
+════════════════════════════════ */
+
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ════════════════════════════════
+   RESPONSIVE
+════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .heroStatRow { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .heroVisual { order: -1; }
+  .pillPassenger, .pillCommercial { display: none; }
+  .heroStatRow { grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 12px; }
+  .heroStatNum { font-size: 18px; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 100px 0 64px; }
+  .facilityRow { flex-direction: column; gap: 10px; }
+  .heroStatRow { grid-template-columns: repeat(2, 1fr); }
+  .brandName { font-size: 38px; }
+  .heroSubTitle { font-size: 24px; }
+}

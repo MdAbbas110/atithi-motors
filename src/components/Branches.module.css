@@ -1,0 +1,116 @@
+.branches {
+  padding: 96px 0;
+  background: var(--white);
+}
+.branchesHeader {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.branchesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.branchCard {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 32px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.mainBranch {
+  border-color: var(--blue);
+  background: var(--blue-light);
+}
+.mainBranch::before {
+  content: 'MAIN BRANCH';
+  position: absolute;
+  top: 16px; right: 16px;
+  background: var(--blue);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.branchCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.comingSoon {
+  background: var(--off-white);
+  border-style: dashed;
+}
+.comingSoon::after {
+  content: 'COMING SOON';
+  position: absolute;
+  top: 16px; right: 16px;
+  background: var(--off-white);
+  color: var(--gray-light);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.branchIcon { font-size: 28px; margin-bottom: 14px; }
+.branchName {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+}
+.branchAddress {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  font-style: normal;
+}
+.branchTiming {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2E7D32;
+  background: #E8F5E9;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+.greenDot {
+  width: 7px; height: 7px;
+  background: #4CAF50;
+  border-radius: 50%;
+  display: inline-block;
+}
+.branchPhone {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.expandingSoon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--gray-light);
+  font-weight: 600;
+  background: white;
+  border-radius: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .branchesGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .branchesGrid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,63 @@
+.footer {
+  background: #0D1B3E;
+  color: rgba(255,255,255,0.7);
+  padding: 48px 0 28px;
+}
+.footerInner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+.footerBrandName {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: white;
+  display: block;
+  margin-bottom: 10px;
+}
+.footerBrandDesc {
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 280px;
+  color: rgba(255,255,255,0.5);
+}
+.footerColTitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 14px;
+}
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+.footerLinks a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.2s;
+}
+.footerLinks a:hover { color: white; }
+.footerBottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .footerInner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .footerInner { grid-template-columns: 1fr; gap: 32px; }
+  .footerBottom { flex-direction: column; text-align: center; }
+}
